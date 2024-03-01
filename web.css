@@ -1,0 +1,65 @@
+main {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: black;
+    max-width: 700px;
+    border-radius: 30px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form ::placeholder {
+    color: rgb(26, 4, 43);
+}
+
+input,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 5px 5px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 12, 63, 0.938);
+    color: aliceblue;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 50px;
+}
+
+input[type="checkbox"] {
+    max-width: 30px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: "Arial", sans-serif;
+    background-image: url('media/bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-margin{
+    margin-top: 50px;
+}
