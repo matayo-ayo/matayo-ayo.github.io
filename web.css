@@ -27,6 +27,7 @@ textarea {
     border: none;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 input[type="submit"] {

@@ -21,28 +21,29 @@
     <form>
       <div class="form-margin">
         <label for="name">Majina</label>
-        <input type="text" name="name" id="name" placeholder="John Doe" minlength="3" maxlength="20" required />
+        <input type="text" id="name" placeholder="John Doe" minlength="3" maxlength="20" required />
       </div>
 
       <div class="form-margin">
         <label for="email adres">Barua pepe</label>
-        <input type="email" name="email" id="email" placeholder="username@domain.end" required />
+        <input type="email" id="email" placeholder="username@domain.end" required />
       </div>
 
       <div class="form-margin">
         <label for="phone">Namba za simu</label>
-        <input type="tel" name="phone" id="reference" placeholder="+255 655 606 468" maxlength="12" minlength="12" required />
+        <input type="tel" id="reference" placeholder="+255 655 606 468" maxlength="12" minlength="12" required />
       </div>
 
       <div class="form-margin">
-        <textarea placeholder="Tupo tayari kukusikiliza ..."></textarea>
+        <label for="ujumbe">Ujumbe</label>
+        <textarea id="ujumbe" placeholder="Tupo tayari kukusikiliza ..."></textarea>
       </div>
 
       <p class="form-margin">
         Kwa kutumia fomu hii tuna ahidi kuwasiliana na wewe kupitia namba na barua pepe uliyoandika hapo juu ndani ya masaa 24
       </p>
 
-      <input type="submit" value="Tuma jumbe">
+      <input type="submit" value="Tuma jumbe" onclick="(alert('Fomu hii ni kwa ajili ya kazi ya darasa'))">
     </form>
 
   </main>
