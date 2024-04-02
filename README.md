@@ -30,6 +30,7 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 
 #### Environment
 - Node
+
 ---
 
 #### Languages
@@ -39,6 +40,7 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 - Arduino
 - Motoko
 - [html, css, json]
+
 ---
 
 #### Frameworks
@@ -47,6 +49,7 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 - Bootstrap
 - W3CSS
 - Tailwind
+
 ---
 
 #### Databases
@@ -56,6 +59,7 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 - MariaDB
 - Mongodb
 - Firebase
+
 ---
 
 #### Cloud and Hosting
@@ -63,21 +67,26 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 - Google Cloud
 - Heroku
 - Fastcomet
+
 ---
 
 #### Vesion controls
 - gitHub
 - gitLab
+
 ---
 ---
 
 #### Reach me
+- Email: mathewfribergayo@gmail.com
 - LinkedIn: [Matayo Ayo](https://www.linkedin.com/in/matayoayo)
 - npm: [Matayo Ayo](https://www.npmjs.com/~matayo-ayo)
 - GitHub: [Matayo Ayo](https://github.com/matayo-ayo/)
 
 ---
+
 ![Github trophy](https://github-profile-trophy.vercel.app/?username=matayo-ayo&theme=matrix&margin-w=30&margin-h=15&column=4&width=100)
 
 ---
+
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=matayo-ayo&count_private=true&show_icons=true&theme=merko)
