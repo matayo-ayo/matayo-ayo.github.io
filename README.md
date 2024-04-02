@@ -85,7 +85,7 @@ It's just simple. I'm a contracts based worker although I am ready to go beyond 
 
 ---
 
-![Github trophy](https://github-profile-trophy.vercel.app/?username=matayo-ayo&theme=matrix&margin-w=30&margin-h=15&column=4&width=100)
+![Github trophy](https://github-profile-trophy.vercel.app/?username=matayo-ayo&theme=matrix&margin-w=30&margin-h=15&)
 
 ---
 
