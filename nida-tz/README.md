@@ -69,6 +69,7 @@ app.get('/route', async (req, res)=>{
     const result = await nidaResult(nida);
 })
 ```
+
 - Regular function
 ```bash
 # separate function usage
