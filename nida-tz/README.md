@@ -14,32 +14,76 @@ This library work with two addition dependency that are ` axios ` and ` dotenv `
 - Function takes two parameters that are nida number and http method ` post ` or ` get `
 - functionName(nidaNumber, post)  or functionName(nidaNumber, get)
 
+#### How to use the library
+
+## 1 Syntax
 ```bash
 # Syntax
 async functionName(parameters);
 
 # sample
 const nidatz = require('nida-tz');
-const method = "post"; #or "get
-const nin = "12345123451234512345"; # put nin in string
-
+const nin = "12345123451234512345"; # define nida
 async function mainFunction() => {
-    const userData = await nidatz.nidaData(nin, method);
+    const result = await nidatz.nidaData(nin);
 }
 ```
 
 ---
 
+
+## 2 Common Express Usage
 ```bash
 # express usage
-const express = require('express')
-const app = expess()
-const nidatz = require('nida-tz')
+const express = require('express');
+const app = expess();
+const nidatz = require('nida-tz');
 
 app.get('/route', async (req, res)=>{
-    const userData = await nidatz.nidaData('12345123451234512345', 'post')
-    res.send(userData)
+    const nida = '123456789456123';
+    const result = await nidatz.nidaData(nida);
+    res.send(result);
 })
 
-app.listen(portNumber, ()=>{})
+app.listen(portNumber, ()=>{});
+```
+
+---
+
+## 3 Express with Separate function
+- Arrow function
+```bash
+# separate function usage
+const express = require('express');
+const app = express();
+const nidatz = require('nida-tz');
+
+# Arrow function usage
+const nidaResult = async(nida)=>{
+    return await nidatz.nidaData(nida);
+};
+
+# Express usage
+app.get('/route', async (req, res)=>{
+    const nida = '123456789456123';
+    const result = await nidaResult(nida);
+})
+```
+- Regular function
+```bash
+# separate function usage
+const express = require('express');
+const app = express();
+const nidatz = require('nida-tz');
+
+# Regular function
+async function nidaResult(nida){
+    return await nidatz.nidaData(nida);
+};
+
+# Express usage
+app.get('/route', async (req, res)=>{
+    const nida = '123456789456123';
+    const result = await nidaResult(nida);
+})
 ```
