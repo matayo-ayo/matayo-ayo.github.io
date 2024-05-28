@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice and Bites</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <div>
+                        <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                            <span class="font-bold text-xl">Kwa Mnunga</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <span class="py-5 px-3 text-gray-700"><a href="tel:+255655606468">+255 655 606 468</a></span>
+                    <span class="py-5 px-3 text-gray-700"><a href="mailto:mathewfribergayo@gmail.com">mathewfribergayo@gmail.com</a></span>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <span class="block py-2 px-4 text-sm hover:bg-gray-200">Phone: (123) 456-7890</span>
+        <span class="block py-2 px-4 text-sm hover:bg-gray-200">Email: contact@juiceandbites.com</span>
+    </div>
+    <!-- Hero Section -->
+    <div class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./media/hero.jpg');">
+        <div class="absolute inset-0 bg-green-900 opacity-50"></div>
+        <div class="relative text-center">
+            <h1 class="text-5xl font-bold text-white">Njoo ujitulize</h1>
+            <p class="mt-4 text-lg text-white">Chimbo la kuaminika la vinywaji na vitafunwa posta</p>
+        </div>
+    </div>
+    
+    <section id="menu" class="bg-gray-100 py-12">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <h2 class="text-4xl font-bold text-center mb-8">Huduma kwa Mnunga</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/maji2.jpg" alt="Menu Item 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Maji</h3>
+                    <p>Tunauza maji ya kunywa ujazo tofauti ya baridi na ya kawaida kuanzia 600Tsh. Njoo ujitulize</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/hero.jpg" alt="Menu Item 2" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Soda</h3>
+                    <p>Soda aina mbalimbali zinapatikana isipokjuwa za chupa. Tunaanzia 350ml na kuendelea za baridi</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/energy.jpg" alt="Menu Item 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Energies</h3>
+                    <p>Kwa uhitaji wa vinywaji vya energies kama (Azam, Extra na Defender) vinapatikana kwa bei elekezi</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/cake.jpg" alt="Menu Item 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Keki</h3>
+                    <p>Keki tamu kwa bei chee zinapatikana kuanzia 500Tsh tu kwa moja.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/vitafunwa.jpg" alt="Menu Item 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Vitafunwa</h3>
+                    <p>Vitafunwa vinavyopatikana hapa ni (Tambi, Karanga za mayai, Crips za ndizi na Crips za viazi)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./media/pipi.jpg" alt="Menu Item 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Pipi, nk</h3>
+                    <p>Pipi, Biskuti, BigG, Candy na bidhaa zingine zinazofanana na hiyo zinapatikana kwa bei rafiki</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <p>&copy; Kwa Mnunga. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
