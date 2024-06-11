@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .full-height {
+            height: 100vh;
+        }
+        .full-width {
+            width: 100%;
+        }
+        /* Added responsive classes for sidebar */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .chat-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex full-height">
+    <!-- Sidebar -->
+    <aside class="w-1/4 bg-white shadow-lg sidebar">
+        <header class="bg-blue-500 text-white p-4 text-center">
+            <h1 class="text-lg font-semibold">FAQs</h1>
+        </header>
+        <!-- Added navigation links -->
+        <nav class="p-4 space-y-2">
+            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                What is AI?
+            </button>
+            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                How does this chat work?
+            </button>
+            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                Can AI understand context?
+            </button>
+            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                What can AI do for me?
+            </button>
+            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                How do I get started with AI?
+            </button>
+        </nav>
+    </aside>
+    
+    <!-- Main Chat Area -->
+    <div class="flex-grow flex flex-col chat-container">
+        <header class="bg-blue-500 text-white p-4 text-center">
+            <h1 class="text-lg font-semibold">Chat with AI</h1>
+        </header>
+        <main id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-4">
+            <!-- Messages will be inserted here -->
+        </main>
+        <footer class="p-4 border-t">
+            <form id="chat-form" class="flex">
+                <input id="message-input" type="text" class="flex-grow p-2 border rounded-l-lg focus:outline-none" placeholder="Type your message...">
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600 focus:outline-none"><i class="bi bi-question"></i></button>
+            </form>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            if (message) {
+                addMessage('user', message);
+                input.value = '';
+                // Simulate AI response
+                setTimeout(() => {
+                    addMessage('ai', 'This is a simulated response.');
+                }, 1000);
+            }
+        });
+
+        function addMessage(sender, text) {
+            const messageContainer = document.getElementById('chat-messages');
+            const messageElement = document.createElement('div');
+            messageElement.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+            messageElement.innerHTML = `
+                <div class="${sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'} rounded-lg p-3 max-w-xs">
+                    ${text}
+                </div>
+            `;
+            messageContainer.appendChild(messageElement);
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
+
+        document.querySelectorAll('aside button').forEach(button => {
+            button.addEventListener('click', function() {
+                const question = this.textContent;
+                addMessage('user', question);
+                setTimeout(() => {
+                    addMessage('ai', 'This is a simulated response to the question: ' + question);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
