@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Platform</title>
+    <meta name="description" content="Uliza rafiki akili mnemba">
+    <meta name="keywords" content="rafiki akili mnemba, rafiki AM, nishule rafiki">
+    <meta name="author" content="Matayo Ayo">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+    <meta http-equiv="Feature-Policy" content="microphone 'none'; camera 'none'">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="rafiki AM">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="logo.png" rel="icon">
+    <link href="logo.png" rel="apple-touch-icon">
     <style>
         body {
             margin: 0;
@@ -27,29 +49,20 @@
             }
         }
     </style>
-</head>
+    <title>Rafiki AM</title>
+  </head>
+  
+
 <body class="bg-gray-100 flex full-height">
     <!-- Sidebar -->
     <aside class="w-1/4 bg-white shadow-lg sidebar">
         <header class="bg-blue-500 text-white p-4 text-center">
-            <h1 class="text-lg font-semibold">FAQs</h1>
+            <h1 class="text-lg font-semibold">-</h1>
         </header>
         <!-- Added navigation links -->
         <nav class="p-4 space-y-2">
             <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
-                What is AI?
-            </button>
-            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
-                How does this chat work?
-            </button>
-            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
-                Can AI understand context?
-            </button>
-            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
-                What can AI do for me?
-            </button>
-            <button class="block w-full text-left p-2 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
-                How do I get started with AI?
+                Mfano wa swali?
             </button>
         </nav>
     </aside>
@@ -57,7 +70,7 @@
     <!-- Main Chat Area -->
     <div class="flex-grow flex flex-col chat-container">
         <header class="bg-blue-500 text-white p-4 text-center">
-            <h1 class="text-lg font-semibold">Chat with AI</h1>
+            <h1 class="text-lg font-semibold">Rafiki AM</h1>
         </header>
         <main id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-4">
             <!-- Messages will be inserted here -->
@@ -80,7 +93,7 @@
                 input.value = '';
                 // Simulate AI response
                 setTimeout(() => {
-                    addMessage('ai', 'This is a simulated response.');
+                    addMessage('ai', 'Huu ni mfano wa jibu la AI.');
                 }, 1000);
             }
         });
@@ -103,7 +116,7 @@
                 const question = this.textContent;
                 addMessage('user', question);
                 setTimeout(() => {
-                    addMessage('ai', 'This is a simulated response to the question: ' + question);
+                    addMessage('ai', 'Na huu ni mfano wa jibu la swali lako la : ' + question);
                 }, 1000);
             });
         });
