@@ -7,15 +7,18 @@ Servo lockMotor;
 
 const String number = "+255620809207";
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
   mySerial.begin(9600);
   doorMotor.attach(8);
   lockMotor.attach(9);
 }
 
-void loop() {
-  if (mySerial.available()) {
+void loop()
+{
+  if (mySerial.available())
+  {
     String sms = readSMS();
     Serial.println(sms);
 
@@ -24,23 +27,30 @@ void loop() {
     String message = getMessage(sms);
 
     // Kutuma message
-    if (senderNumber == number) {
-      if (message == "FUNGA MLANGO") {
+    if (senderNumber == number)
+    {
+      if (message == "FUNGA MLANGO")
+      {
         lockDoor();
-      } else if (message == "FUGUA MLANGO") {
+      }
+      else if (message == "FUGUA MLANGO")
+      {
         unlockDoor();
       }
-    } else {
+    }
+    else
+    {
       Serial.println("TAARIFA:\n Namba " + senderNumber + " imetua ujumbe " + message + " katika mfumo wa uangalizi nyumbani");
     }
   }
 }
 
-
 // Kusoma message
-String readSMS() {
+String readSMS()
+{
   String sms = "";
-  while (mySerial.available()) {
+  while (mySerial.available())
+  {
     char c = mySerial.read();
     sms += c;
     delay(10);
@@ -48,20 +58,21 @@ String readSMS() {
   return sms;
 }
 
-
 // Kupata namba ya mtumaji
-String getSenderNumber(String sms) {
+String getSenderNumber(String sms)
+{
   int start = sms.indexOf("+");
   int end = sms.indexOf(",", start);
   return sms.substring(start, end);
 }
 
-
 // Kupata message
-String getMessage(String sms) {
+String getMessage(String sms)
+{
   int start = sms.indexOf("\n");
   int end = sms.indexOf("\n", start);
-  if (end == -1) {
+  if (end == -1)
+  {
     end = sms.length();
   }
   String message = sms.substring(start + 1, end);
@@ -69,9 +80,9 @@ String getMessage(String sms) {
   return message;
 }
 
-
 // Kufunga mlango
-void lockDoor() {
+void lockDoor()
+{
   Serial.println("TAARIFA:\n Mlango unafungwa");
   doorMotor.write(90);
   delay(1000);
@@ -81,9 +92,9 @@ void lockDoor() {
   Serial.println("Mlango na kitasa vimefungwa");
 }
 
-
 // Kufungua mlango
-void unlockDoor() {
+void unlockDoor()
+{
   Serial.println("TAARIFA:\n Mlango unafunguliwa");
   doorMotor.write(0);
   delay(1000);

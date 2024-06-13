@@ -136,26 +136,26 @@ String getMessage(String sms) {
 6. ***Amri ya kufunga mlango***
 ```bash
 void lockDoor() {
-  Serial.println("Notification:\n Door is locked");
+  Serial.println("TAARIFA:\n Mlango unafungwa");
   doorMotor.write(90);
   delay(1000);
-  Serial.println("Notification:\n Bolt is engaged");
+  Serial.println("TAARIFA:\n Kitasa kinafungwa");
   lockMotor.write(90);
   delay(1000);
-  Serial.println("Door and bolt are locked");
+  Serial.println("Mlango na kitasa viimefungwa");
 }
 ```
 
 7. ***Amri ya kufungua mlango***
 ```bash
 void unlockDoor() {
-  Serial.println("Notification:\n Door is unlocked");
+  Serial.println("TAARIFA:\n Mlango unafunguliwa");
   doorMotor.write(0);
   delay(1000);
-  Serial.println("Notification:\n Bolt is disengaged");
+  Serial.println("TAARIFA:\n Kitasa kinafunguliwa");
   lockMotor.write(0);
   delay(1000);
-  Serial.println("Door and bolt are unlocked");
+  Serial.println("Mlango na kitasa vimefunguliwa");
 }
 ```
 
