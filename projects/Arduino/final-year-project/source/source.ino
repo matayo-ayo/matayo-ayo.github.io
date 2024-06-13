@@ -89,7 +89,7 @@ void lockDoor()
   Serial.println("TAARIFA:\n Kitasa kinafungwa");
   lockMotor.write(90);
   delay(1000);
-  Serial.println("Mlango na kitasa vimefungwa");
+  Serial.println("TAARIFA:\n Mlango na kitasa vimefungwa");
 }
 
 // Kufungua mlango
@@ -101,5 +101,5 @@ void unlockDoor()
   Serial.println("TAARIFA:\n Kitasa kinafunguliwa");
   lockMotor.write(0);
   delay(1000);
-  Serial.println("Mlango na kitasa vimefunguliwa");
+  Serial.println("TAARIFA:\n Mlango na kitasa vimefunguliwa");
 }
