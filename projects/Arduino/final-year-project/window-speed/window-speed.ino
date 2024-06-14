@@ -2,121 +2,33 @@
 
 Servo windowControl;
 
-void setup(){
+void setup() {
   windowControl.attach(8);
+  // windowControl.write(windowControl.read());
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void loop(){
-  int rotation = 0;
-  windowControl.write(rotation);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation += 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
+void loop() {
+  openWindow(windowControl.read());
+  closeWindow(windowControl.read());
+}
 
-  // Returning back to 0
-  windowControl.write(rotation);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  windowControl.write(rotation -= 10);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);
+void openWindow(int rotation) {
+  for (int x = rotation; x <= 180; x += 10) {
+    digitalWrite(LED_BUILTIN, HIGH);
+    windowControl.write(x);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
+  }
+}
+
+void closeWindow(int rotation) {
+  for (int x = rotation; x >= 0; x -= 10) {
+    digitalWrite(LED_BUILTIN, HIGH);
+    windowControl.write(x);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
+  }
 }
