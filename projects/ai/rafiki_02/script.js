@@ -1,4 +1,3 @@
-// Array of responses from ChatGPT
 const responses = [
     "Subiri kidogo kuna vitu nimesahau 😂!",
     "Aaanh 🤔. Hili swali ni gumu bhana",
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function displayWelcomeMessage() {
     var randomIndex = Math.floor(Math.random() * responses.length);
     var randomResponse = responses[randomIndex];
-    addMessage("ChatGPT", randomResponse);
+    addMessage("Rafiki:", randomResponse);
 }
 
 function sendMessage() {
@@ -24,13 +23,13 @@ function sendMessage() {
     var messageText = messageInput.value.trim();
 
     if (messageText !== "") {
-        addMessage("You", messageText);
+        addMessage("Mimi:", messageText);
 
         // Simulate a reply after a short delay
         setTimeout(function () {
             var randomIndex = Math.floor(Math.random() * responses.length);
             var randomResponse = responses[randomIndex];
-            addMessage("ChatGPT", randomResponse);
+            addMessage("Rafiki:", randomResponse);
         }, Math.random() * 1000 + 500); // Random delay between 0.5 to 1.5 seconds
 
         messageInput.value = "";
@@ -43,20 +42,25 @@ function addMessage(user, text) {
     var messageContainer = document.createElement("div");
     messageContainer.classList.add("message");
 
-    var messageBody = document.createElement("div");
-    messageBody.classList.add("message-body");
-
-    var textElement = document.createElement("div");
-    textElement.textContent = text;
-
-    messageBody.appendChild(textElement);
-    messageContainer.appendChild(messageBody);
-
-    if (user === "You") {
+    if (user === "Mimi:") {
         messageContainer.classList.add("sent");
     } else {
         messageContainer.classList.add("received");
     }
+
+    var messageBody = document.createElement("div");
+    messageBody.classList.add("message-body");
+
+    var senderElement = document.createElement("div");
+    senderElement.classList.add("sender");
+    senderElement.textContent = user;
+
+    var textElement = document.createElement("div");
+    textElement.textContent = text;
+
+    messageBody.appendChild(senderElement);
+    messageBody.appendChild(textElement);
+    messageContainer.appendChild(messageBody);
 
     chatBox.appendChild(messageContainer);
 

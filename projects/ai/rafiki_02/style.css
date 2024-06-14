@@ -169,7 +169,7 @@ body {
 }
 
 .message.sent {
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-left: auto;
     background-color: #3182ce;
     /* Blue background for sent messages */
