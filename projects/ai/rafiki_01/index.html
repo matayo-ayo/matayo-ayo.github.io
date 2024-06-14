@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uliza rAfiKi akili mnemba">
+  <meta name="keywords" content="rAfiKi akili mnemba, rAfiKi, nishule rAfiKi">
+  <meta name="author" content="Matayo Ayo">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="deny">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+  <meta http-equiv="Feature-Policy" content="microphone 'none'; camera 'none'">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="rAfiKi">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="logo.png" rel="icon">
+  <link href="logo.png" rel="apple-touch-icon">
+  <meta property="og:title" content="rAfiKi" />
+  <meta property="og:type" content="chat" />
+  <meta property="og:url" content="https://matayo-ayo.github.io/projects/AI/rfiki_01/" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:site_name" content="rAfiKi AM" />
+  <link rel="stylesheet" href="./style.css">
+  <title>rAfiKi AM</title>
+</head>
+
+
+<body class="bg-gray-200">
+  <div class="flex flex-col h-screen">
+    <!-- HEADER -->
+    <div class="bg-white border-b border-gray-300 p-4">
+      <h1 class="text-xl font-semibold">HEADER</h1>
+      <!-- Add any header content here -->
+    </div>
+
+    <!-- Main content area -->
+    <div class="flex flex-1">
+      <!-- FAQ Sidebar -->
+      <div class="w-1/4 bg-white border-r border-gray-300 p-4">
+        <h2 class="text-lg font-semibold mb-4">FAQ</h2>
+        <input id="searchInput" type="text" placeholder="Search FAQ..." class="border border-gray-300 p-2 rounded mb-4">
+        <div id="faqContent">
+          <!-- FAQ items will be dynamically added here -->
+        </div>
+      </div>
+
+      <!-- Chat area -->
+      <div class="flex-1 flex flex-col">
+        <div class="chat-box flex-1 bg-white border-t border-r border-gray-300 p-4">
+          <!-- Existing chat content -->
+        </div>
+        <div class="input-box bg-white border-t border-gray-300 p-4 flex items-center">
+          <input type="text" id="message-input" placeholder="Type your message..." class="rounded-l-lg border border-gray-300 p-2 flex-1">
+          <button onclick="sendMessage()" class="px-4 py-2 rounded-r-lg bg-blue-500 text-white">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.full-height {
+    height: 100vh;
+}
+.full-width {
+    width: 100%;
+}
+/* Added responsive classes for sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .chat-container {
+        width: 100%;
+    }
+}

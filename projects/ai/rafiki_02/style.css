@@ -1,0 +1,226 @@
+body {
+    background-color: #1a202c;
+    /* Dark background */
+    color: #e2e8f0;
+    /* Light text */
+    font-family: 'Open Sans', sans-serif;
+    /* Set the font family */
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.bg-gray-900 {
+    background-color: #1a202c;
+    /* Dark background */
+}
+
+.text-white {
+    color: #ffffff;
+    /* White text */
+}
+
+.bg-gray-800 {
+    background-color: #2d3748;
+    /* Slightly lighter dark background */
+}
+
+.border-b {
+    border-bottom-width: 1px;
+}
+
+.border-gray-700 {
+    border-color: #4a5568;
+    /* Dark border */
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    /* Text size */
+}
+
+.font-semibold {
+    font-weight: 600;
+    /* Semi-bold text */
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.border-r {
+    border-right-width: 1px;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    /* Text size */
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-gray-600 {
+    border-color: #718096;
+    /* Dark border */
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.bg-gray-700 {
+    background-color: #4a5568;
+    /* Dark background for input */
+}
+
+.text-gray-200 {
+    color: #e2e8f0;
+    /* Light text for input */
+}
+
+.chat-box {
+    flex: 1;
+    background-color: #2d3748;
+    /* Dark background for chat area */
+    border-top: 1px solid #4a5568;
+    border-right: 1px solid #4a5568;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.input-box {
+    background-color: #4a5568;
+    /* Dark background for input box */
+    border-top: 1px solid #718096;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #718096;
+    /* Dark border */
+    border-radius: 0.25rem 0 0 0.25rem;
+    /* Rounded corners */
+    background-color: #2d3748;
+    /* Dark background for input */
+    color: #e2e8f0;
+    /* Light text */
+    outline: none;
+}
+
+.input-box button {
+    padding: 0.5rem 1rem;
+    background-color: #3182ce;
+    /* Blue background for button */
+    color: #ffffff;
+    /* White text */
+    border: none;
+    border-radius: 0 0.25rem 0.25rem 0;
+    /* Rounded corners */
+    cursor: pointer;
+    outline: none;
+}
+
+.input-box button:hover {
+    background-color: #2b6cb0;
+    /* Darker blue on hover */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    max-width: 70%;
+}
+
+.message.sent {
+    justify-content: flex-end;
+    margin-left: auto;
+    background-color: #3182ce;
+    /* Blue background for sent messages */
+    color: #ffffff;
+    /* White text */
+    border-radius: 0.25rem 0.25rem 0 0.25rem;
+    /* Rounded corners */
+    padding: 0.5rem 1rem;
+}
+
+.message.received {
+    justify-content: flex-start;
+    margin-right: auto;
+    background-color: #4a5568;
+    /* Dark background for received messages */
+    color: #e2e8f0;
+    /* Light text */
+    border-radius: 0.25rem 0.25rem 0.25rem 0;
+    /* Rounded corners */
+    padding: 0.5rem 1rem;
+}
+
+.faq-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-overlay.hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.faq-overlay:not(.hidden) {
+    pointer-events: auto;
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+
+@media (max-width: 800px) {
+    .faq-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 80%; /* Adjust width of sidebar */
+        background-color: #2d3748;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .faq-sidebar.visible {
+        transform: translateX(0);
+    }
+}
