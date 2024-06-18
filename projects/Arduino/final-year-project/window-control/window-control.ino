@@ -4,7 +4,6 @@ Servo windowControl;
 
 void setup() {
   windowControl.attach(8);
-  // windowControl.write(windowControl.read());
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
