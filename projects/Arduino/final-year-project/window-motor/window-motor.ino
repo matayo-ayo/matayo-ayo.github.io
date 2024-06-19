@@ -3,17 +3,17 @@
 Servo windowControl;
 
 void setup() {
-  windowControl.attach(8);
+  windowControl.attach(4);
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  openWindow(windowControl.read());
-  closeWindow(windowControl.read());
+  openWindow();
+  closeWindow();
 }
 
-void openWindow(int rotation) {
-  for (int x = rotation; x <= 180; x += 10) {
+void openWindow() {
+  for (int x = 0; x <= 180; x += 10) {
     digitalWrite(LED_BUILTIN, HIGH);
     windowControl.write(x);
     delay(500);
@@ -22,8 +22,8 @@ void openWindow(int rotation) {
   }
 }
 
-void closeWindow(int rotation) {
-  for (int x = rotation; x >= 0; x -= 10) {
+void closeWindow() {
+  for (int x = 180; x >= 0; x -= 10) {
     digitalWrite(LED_BUILTIN, HIGH);
     windowControl.write(x);
     delay(500);

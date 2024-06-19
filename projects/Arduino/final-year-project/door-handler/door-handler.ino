@@ -1,24 +1,27 @@
 #include <Servo.h>
 
-Servo handlerMotor;
+Servo lockMotor;
 
 void setup() {
-  handlerMotor.attach(9);
+  lockMotor.attach(2);
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  lockHandler();
+  lockDoor();
   delay(2000);
-  unlockHandler();
+  unlockDoor();
+  delay(2000);
 }
 
-void lockHandler() {
-  handlerMotor.write(90);
+void lockDoor() {
   digitalWrite(LED_BUILTIN, HIGH);
+  lockMotor.write(0);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
-void unlockHandler() {
-  handlerMotor.write(0);
+void unlockDoor() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  lockMotor.write(90);
   digitalWrite(LED_BUILTIN, LOW);
 }
