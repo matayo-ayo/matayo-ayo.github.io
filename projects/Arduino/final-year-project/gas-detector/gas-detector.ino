@@ -1,6 +1,6 @@
 const int gasSensorPin = A0;
 const int ledPin = 5;
-const int threshold = 100;
+const int threshold = 200;
 
 void setup() {
   pinMode(gasSensorPin, INPUT);

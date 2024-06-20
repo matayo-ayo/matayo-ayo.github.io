@@ -1,16 +1,19 @@
 #include <Servo.h>
+#include <SoftwareSerial.h>
 
 // Objects
 Servo windowMotor;
 Servo doorMotor;
 Servo lockMotor;
+SoftwareSerial mySerial(1, 0);
 
 // Variables
 const String number = "+255620809207";
 const int relayPin = 6;
 const int gasLedPin = 5;
-const int threshold = 100;
+const int threshold = 200;
 const int gasSensorPin = A0;
+
 // Checkers
 bool gasFlag = false;
 bool gasLeakMsg = false;
@@ -22,6 +25,7 @@ bool windowStatus = false;
 
 void setup() {
   Serial.begin(9600);
+  mySerial.begin(9600);
 
   pinMode(gasSensorPin, INPUT);
   pinMode(gasLedPin, OUTPUT);
@@ -31,10 +35,6 @@ void setup() {
   doorMotor.attach(3);
   windowMotor.attach(4);
   pinMode(LED_BUILTIN, OUTPUT);
-
-  Serial.println("AT");
-  delay(1000);
-  Serial.println("AT+CNMI=1,2,0,0,0\r");
 }
 
 void loop() {
@@ -50,22 +50,26 @@ void loop() {
       gasLeakMsg = true;
       gasNormalMsg = false;
     }
+
+    // Open the window
     openWindow();
     windowStatus = true;
   } else if (gasLevel < threshold && windowStatus && gasFlag) {
     gasFlag = false;
+
     if (!gasNormalMsg) {
       sendMessage("TAARIFA:\n Kiwango cha gesi kimerudi kuwa sawa. Dirisha linaweza kufungwa kwa usalama");
       gasLeakMsg = false;
       gasNormalMsg = true;
     }
-    digitalWrite(gasLedPin, LOW);
-    delay(5000);
+
+    // Close the window
     closeWindow();
     windowStatus = false;
+    digitalWrite(gasLedPin, LOW);
   }
 
-  if (Serial.available()) {
+  if (mySerial.available()) {
     String sms = readSMS();
     String senderNumber = getSenderNumber(sms);
     String message = getMessage(sms);
@@ -155,8 +159,8 @@ void lightOff() {
 // Get full message
 String readSMS() {
   String sms = "";
-  while (Serial.available()) {
-    char c = Serial.read();
+  while (mySerial.available()) {
+    char c = mySerial.read();
     sms += c;
     delay(10);
   }
@@ -184,11 +188,11 @@ String getMessage(String sms) {
 
 // Send message
 void sendMessage(String messageBody) {
-  Serial.print("AT+CMGF=1\r");
+  mySerial.print("AT+CMGF=1\r");
   delay(1000);
-  Serial.print("AT+CMGS=\"" + number + "\"\r");
+  mySerial.print("AT+CMGS=\"" + number + "\"\r");
   delay(1000);
-  Serial.print(messageBody);
+  mySerial.print(messageBody);
   delay(1000);
-  Serial.write(26);
+  mySerial.write(26);
 }
