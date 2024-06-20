@@ -9,7 +9,7 @@ Servo lockMotor;
 const String number = "+255620809207";
 const int relayPin = 6;
 const int gasLedPin = 5;
-const int threshold = 300;
+const int threshold = 100;
 const int gasSensorPin = A0;
 // Checkers
 bool gasFlag = false;
@@ -35,15 +35,16 @@ void setup() {
   Serial.println("AT");
   delay(1000);
   Serial.println("AT+CNMI=1,2,0,0,0\r");
-
-  digitalWrite(gasLedPin, LOW);
 }
 
 void loop() {
   int gasLevel = analogRead(gasSensorPin);
 
-  if (gasLevel >= threshold && !gasFlag && windowStatus) {
+  if (gasLevel >= threshold && !windowStatus && !gasFlag) {
     gasFlag = true;
+
+    digitalWrite(gasLedPin, HIGH);
+
     if (!gasLeakMsg) {
       sendMessage("TAARIFA:\n Kiwango cha gesi kinakadiriwa kufikia " + String(gasLevel) + ". Dirisha linafunguliwa kwa usalama");
       gasLeakMsg = true;
@@ -51,13 +52,15 @@ void loop() {
     }
     openWindow();
     windowStatus = true;
-  } else if (gasLevel < threshold && gasFlag) {
+  } else if (gasLevel < threshold && windowStatus && gasFlag) {
     gasFlag = false;
     if (!gasNormalMsg) {
       sendMessage("TAARIFA:\n Kiwango cha gesi kimerudi kuwa sawa. Dirisha linaweza kufungwa kwa usalama");
       gasLeakMsg = false;
       gasNormalMsg = true;
     }
+    digitalWrite(gasLedPin, LOW);
+    delay(5000);
     closeWindow();
     windowStatus = false;
   }
@@ -68,20 +71,18 @@ void loop() {
     String message = getMessage(sms);
 
     if (senderNumber == number) {
-      if (message == "FUNGA MLANGO" && !doorStatus || !handleStatus) {
+      if (message == "FUNGA MLANGO" && !doorStatus) {
         lockDoor();
         doorStatus = true;
         handleStatus = true;
-      } else if (message == "FUNGUA MLANGO") {
-        if (doorStatus == true || handleStatus == true) {
-          unlockDoor();
-          doorStatus = true;
-          handleStatus = true;
-        }
-      } else if (message == "WASHA TAA" && lightStatus == false) {
+      } else if (message == "FUNGUA MLANGO" && doorStatus) {
+        unlockDoor();
+        doorStatus = false;
+        handleStatus = false;
+      } else if (message == "WASHA TAA" && !lightStatus) {
         lightOn();
         lightStatus = true;
-      } else if (message == "ZIMA TAA") {
+      } else if (message == "ZIMA TAA" && lightStatus) {
         lightOff();
         lightStatus = false;
       }
@@ -94,11 +95,13 @@ void loop() {
 // Lock door
 void lockDoor() {
   digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(gasLedPin, HIGH);
   doorMotor.write(180);
   delay(1000);
   lockMotor.write(0);
   sendMessage("TAARIFA:\n Mlango umefungwa kikamilifu");
   digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(gasLedPin, LOW);
 }
 
 // Unlock door
@@ -111,7 +114,7 @@ void unlockDoor() {
   digitalWrite(LED_BUILTIN, LOW);
 }
 
-// Opend window
+// Open window
 void openWindow() {
   for (int x = 0; x <= 180; x += 10) {
     digitalWrite(LED_BUILTIN, HIGH);
