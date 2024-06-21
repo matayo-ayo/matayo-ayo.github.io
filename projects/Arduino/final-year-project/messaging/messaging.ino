@@ -1,39 +1,27 @@
-// Include necessary libraries
 #include <SoftwareSerial.h>
 
-// Define GSM module connections
-#define GSM_TX_PIN 7
-#define GSM_RX_PIN 8
-
-// Create SoftwareSerial object to communicate with GSM
-SoftwareSerial gsm(GSM_TX_PIN, GSM_RX_PIN);
+SoftwareSerial gsm(1, 0);
 
 void setup() {
-    // Start serial communication with PC
     Serial.begin(9600);
-
-    // Start communication with GSM module
     gsm.begin(9600);
-    delay(3000);  // Give time to initialize
+    delay(3000);
 }
 
 void loop() {
     sendMessage("Hello from GSM module!");
-
-    // Wait for 2 seconds before sending the next message
     delay(2000);
 }
 
 void sendMessage(String message) {
-    // AT command to send SMS message
-    gsm.println("AT+CMGF=1");    // Set SMS mode to text
+    gsm.println("AT+CMGF=1");
     delay(100);
-    gsm.println("AT+CMGS=\"+255655606468\"\r");  // Replace with recipient's number
+    gsm.println("AT+CMGS=\"+000123456789\"\r");
     delay(100);
-    gsm.println(message);       // The SMS message
+    gsm.println(message);
     delay(100);
-    gsm.println((char)26);      // End AT command with Ctrl+Z
+    gsm.println((char)26);
     delay(100);
     gsm.println();
-    delay(5000);  // Give module time to send SMS
+    delay(5000);
 }

@@ -1,20 +1,17 @@
 #include <Servo.h>
 #include <SoftwareSerial.h>
 
-// Objects
 Servo windowMotor;
 Servo doorMotor;
 Servo lockMotor;
 SoftwareSerial mySerial(1, 0);
 
-// Variables
-const String number = "+255620809207";
+const String number = "+000123456789";
 const int relayPin = 6;
 const int gasLedPin = 5;
 const int threshold = 200;
 const int gasSensorPin = A0;
 
-// Checkers
 bool gasFlag = false;
 bool gasLeakMsg = false;
 bool gasNormalMsg = false;
@@ -42,28 +39,21 @@ void loop() {
 
   if (gasLevel >= threshold && !windowStatus && !gasFlag) {
     gasFlag = true;
-
     digitalWrite(gasLedPin, HIGH);
-
     if (!gasLeakMsg) {
       sendMessage("TAARIFA:\n Kiwango cha gesi kinakadiriwa kufikia " + String(gasLevel) + ". Dirisha linafunguliwa kwa usalama");
       gasLeakMsg = true;
       gasNormalMsg = false;
     }
-
-    // Open the window
     openWindow();
     windowStatus = true;
   } else if (gasLevel < threshold && windowStatus && gasFlag) {
     gasFlag = false;
-
     if (!gasNormalMsg) {
       sendMessage("TAARIFA:\n Kiwango cha gesi kimerudi kuwa sawa. Dirisha linaweza kufungwa kwa usalama");
       gasLeakMsg = false;
       gasNormalMsg = true;
     }
-
-    // Close the window
     closeWindow();
     windowStatus = false;
     digitalWrite(gasLedPin, LOW);
@@ -73,7 +63,6 @@ void loop() {
     String sms = readSMS();
     String senderNumber = getSenderNumber(sms);
     String message = getMessage(sms);
-
     if (senderNumber == number) {
       if (message == "FUNGA MLANGO" && !doorStatus) {
         lockDoor();
@@ -96,7 +85,6 @@ void loop() {
   }
 }
 
-// Lock door
 void lockDoor() {
   digitalWrite(LED_BUILTIN, HIGH);
   digitalWrite(gasLedPin, HIGH);
@@ -108,7 +96,6 @@ void lockDoor() {
   digitalWrite(gasLedPin, LOW);
 }
 
-// Unlock door
 void unlockDoor() {
   digitalWrite(LED_BUILTIN, HIGH);
   doorMotor.write(0);
@@ -118,7 +105,6 @@ void unlockDoor() {
   digitalWrite(LED_BUILTIN, LOW);
 }
 
-// Open window
 void openWindow() {
   for (int x = 0; x <= 180; x += 10) {
     digitalWrite(LED_BUILTIN, HIGH);
@@ -129,7 +115,6 @@ void openWindow() {
   }
 }
 
-// Close window
 void closeWindow() {
   for (int x = 180; x >= 0; x -= 10) {
     digitalWrite(LED_BUILTIN, HIGH);
@@ -140,7 +125,6 @@ void closeWindow() {
   }
 }
 
-// Light on
 void lightOn() {
   sendMessage("Inawasha taa");
   digitalWrite(relayPin, HIGH);
@@ -148,7 +132,6 @@ void lightOn() {
   sendMessage("TAARIFA:\n Taa zimewashwa kikamilifu");
 }
 
-// Light off
 void lightOff() {
   sendMessage("Inazima taa");
   digitalWrite(relayPin, LOW);
@@ -156,7 +139,6 @@ void lightOff() {
   sendMessage("TAARIFA:\n Taa zimezimwa kikamilifu");
 }
 
-// Get full message
 String readSMS() {
   String sms = "";
   while (mySerial.available()) {
@@ -167,14 +149,12 @@ String readSMS() {
   return sms;
 }
 
-// Get sender number
 String getSenderNumber(String sms) {
   int start = sms.indexOf("+");
   int end = sms.indexOf(",", start);
   return sms.substring(start, end);
 }
 
-// Get message body
 String getMessage(String sms) {
   int start = sms.indexOf("\n");
   int end = sms.indexOf("\n", start + 1);
@@ -186,7 +166,6 @@ String getMessage(String sms) {
   return message;
 }
 
-// Send message
 void sendMessage(String messageBody) {
   mySerial.print("AT+CMGF=1\r");
   delay(1000);
