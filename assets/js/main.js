@@ -111,10 +111,10 @@
   new PureCounter();
 
   /**
-   * Animate the skills items on reveal
+   * Animate the projects items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
+  let projectsAnimation = document.querySelectorAll('.projects-animation');
+  projectsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
       offset: '80%',

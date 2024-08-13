@@ -619,29 +619,29 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# skills Section
 --------------------------------------------------------------*/
-.about .content h2 {
+.skills .content h2 {
   font-weight: 700;
   font-size: 24px;
 }
 
-.about .content ul {
+.skills .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.skills .content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
-.about .content ul strong {
+.skills .content ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
+.skills .content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: var(--accent-color);
@@ -682,16 +682,16 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# projects Section
 --------------------------------------------------------------*/
-.skills .progress {
+.projects .progress {
   height: 60px;
   display: block;
   background: none;
   border-radius: 0;
 }
 
-.skills .progress .skill {
+.projects .progress .skill {
   color: var(--heading-color);
   padding: 0;
   margin: 0 0 6px 0;
@@ -701,17 +701,17 @@ section,
   font-family: var(--heading-font);
 }
 
-.skills .progress .skill .val {
+.projects .progress .skill .val {
   float: right;
   font-style: normal;
 }
 
-.skills .progress-bar-wrap {
+.projects .progress-bar-wrap {
   background: color-mix(in srgb, var(--default-color), transparent 90%);
   height: 10px;
 }
 
-.skills .progress-bar {
+.projects .progress-bar {
   width: 1px;
   height: 10px;
   transition: 0.9s;
