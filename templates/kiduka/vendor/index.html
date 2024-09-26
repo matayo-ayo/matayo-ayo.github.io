@@ -9,16 +9,16 @@
   <meta name="author" content="Matayo Ayo">
   <link rel="canonical" href="https://kiduka.com">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/logo.png">
-  <link rel="icon" type="image/png" href="/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/logo.png">
+  <link rel="icon" type="image/png" href="icons/favicon.ico">
 
-  <link href="/styles/style.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="/js/theme.js" type="text/javascript"></script>
-  <script src="/js/apexcharts.js"></script>
+  <script src="js/theme.js" type="text/javascript"></script>
+  <script src="js/apexcharts.js"></script>
 
   <title>kiduka - dashboard</title>
 
@@ -49,8 +49,8 @@
                     </svg>
                 </button>
                 <a href="/" class="flex">
-                    <img src="/icons/logo.png" id="logo" class="h-12 w-h-12 mr-3" alt="logo">
-                    <span class="self-center text-3xl font-semibold whitespace-nowrap text-gray-700 dark:text-gray-200">kiduka</span>
+                    <img src="icons/logo.png" id="logo" class="h-12 w-h-12 mr-3" alt="logo">
+                    <span class="self-center text-3xl font-bold whitespace-nowrap text-gray-700 dark:text-gray-200">kiduka</span>
                 </a>
             </div>
             <div class="flex items-center">
@@ -65,7 +65,7 @@
                 <!-- User profile -->
                 <div>
                     <button type="button" data-dropdown-toggle="apps-dropdown" class="p-2 text-gray-500 rounded-lg sm:flex hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
-                        <img src="/icons/logo.png" alt="user" class="w-9 h-9 rounded-full ring-4 ring-gray-600 dark:ring-gray-500 p-1" srcset="">
+                        <img src="icons/logo.png" alt="user" class="w-9 h-9 rounded-full ring-4 ring-gray-600 dark:ring-gray-500 p-1" srcset="">
                     </button>
                     <div class="z-50 hidden max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:bg-gray-700 dark:divide-gray-600"
                         id="apps-dropdown">
@@ -217,216 +217,210 @@
     <main id="main-content" class="relative w-full h-full overflow-y-auto lg:ml-64">
         <div class="px-4 pt-6 pb-6">
             
-                
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-        <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-            <div class="w-full">
-                <h5 class="md:text-3xl text-2xl font-bold capitalize">users</h5>
-                <div class="flex items-center justify-between w-full mt-10">
-                    <div class="p-3">
-                        <h3 class="md:text-4xl text-lg">284 <span class="text-sm text-gray-400">buyers</span></h3>
-                    </div>
-                    <div class="p-3">
-                        <span class="md:text-4xl text-lg">24 <span
-                                class="text-sm text-gray-400">followers</span></span>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+    <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+        <div class="w-full">
+            <h5 class="md:text-3xl text-2xl font-semibold capitalize">users</h5>
+            <div class="flex items-center justify-between w-full mt-10">
+                <div class="p-3">
+                    <h3 class="md:text-4xl text-lg">284 <span class="text-sm text-gray-400">buyers</span></h3>
                 </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-            <div class="w-full">
-                <h5 class="md:text-3xl text-2xl font-bold capitalize">orders</h5>
-                <div class="flex items-center justify-between w-full mt-10">
-                    <div class="p-3">
-                        <h3 class="md:text-4xl text-lg">0 <span class="text-sm text-gray-400">pending</span></h3>
-                    </div>
-                    <div class="p-3">
-                        <span class="md:text-4xl text-lg">24 <span
-                                class="text-sm text-gray-400">intransit</span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-            <div class="w-full">
-                <h5 class="md:text-3xl text-2xl font-bold capitalize truncate">engagement</h5>
-                <div class="flex items-center justify-between w-full mt-10">
-                    <div class="p-3">
-                        <h3 class="md:text-4xl text-lg">82 <span class="text-sm text-gray-400">saved</span></h3>
-                    </div>
-                    <div class="p-3">
-                        <span class="md:text-4xl text-lg">19 <span class="text-sm text-gray-400">wishlisted</span></span>
-                    </div>
+                <div class="p-3">
+                    <span class="md:text-4xl text-lg">24 <span
+                            class="text-sm text-gray-400">followers</span></span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
-
-        <div class="col-span-full xl:col-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
-                <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-                    <div class="w-full">
-                        <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">hot categories</h5>
-                        <div id="chart1" class="text-gray-800 dark:text-gray-200"></div>
-                    </div>
+    <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+        <div class="w-full">
+            <h5 class="md:text-3xl text-2xl font-semibold capitalize">orders</h5>
+            <div class="flex items-center justify-between w-full mt-10">
+                <div class="p-3">
+                    <h3 class="md:text-4xl text-lg">0 <span class="text-sm text-gray-400">pending</span></h3>
                 </div>
-    
-                <div  class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-                    <div class="w-full">
-                        <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">hot brands</h5>
-                        <div id="chart2" class="text-gray-800 dark:text-gray-200"></div>
-                    </div>
+                <div class="p-3">
+                    <span class="md:text-4xl text-lg">24 <span
+                            class="text-sm text-gray-400">intransit</span></span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-span-full xl:col-span-2">
-            <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
+    <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+        <div class="w-full">
+            <h5 class="md:text-3xl text-2xl font-semibold capitalize truncate">engagement</h5>
+            <div class="flex items-center justify-between w-full mt-10">
+                <div class="p-3">
+                    <h3 class="md:text-4xl text-lg">82 <span class="text-sm text-gray-400">saved</span></h3>
+                </div>
+                <div class="p-3">
+                    <span class="md:text-4xl text-lg">19 <span class="text-sm text-gray-400">wishlisted</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
+
+    <div class="col-span-full xl:col-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
                 <div class="w-full">
-                    <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3 text-gray-800 dark:text-gray-200">store reach</h5>
-                    <div id="chart3" class="text-gray-800"></div>
+                    <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">hot categories</h5>
+                    <div id="chart1" class="text-gray-800 dark:text-gray-200"></div>
+                </div>
+            </div>
+
+            <div  class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+                <div class="w-full">
+                    <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">hot brands</h5>
+                    <div id="chart2" class="text-gray-800 dark:text-gray-200"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-span-full xl:col-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
-                <div class="rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 bg-gray-50 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-                    <div class="w-full">
-                        <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">low stock</h5>
-                        <table class="w-full text-left capitalize overflow-y-auto">
-                            <thead class="font-bold uppercase bg-gray-50 dark:bg-gray-700">
-                                <tr>
-                                    <th class="py-2 px-2">item</th>
-                                    <th class="py-2 px-2">brand</th>
-                                    <th class="py-2 px-2">Stock</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b dark:border-b-gray-400">
-                                    <td class="truncate px-2 py-2 text-xs">viatu</td>
-                                    <td class="truncate px-2 py-2 text-xs">puma</td>
-                                    <td class="truncate px-2 py-2 text-xs">72/628</td>
-                                </tr>
-                                <tr class="border-b dark:border-b-gray-400">
-                                    <td class="truncate px-2 py-2 text-xs">viatu</td>
-                                    <td class="truncate px-2 py-2 text-xs">puma</td>
-                                    <td class="truncate px-2 py-2 text-xs">72/628</td>
-                                </tr>
-                                <tr class="border-b dark:border-b-gray-400">
-                                    <td class="truncate px-2 py-2 text-xs">viatu</td>
-                                    <td class="truncate px-2 py-2 text-xs">puma</td>
-                                    <td class="truncate px-2 py-2 text-xs">72/628</td>
-                                </tr>
-                                <tr class="border-b dark:border-b-gray-400">
-                                    <td class="truncate px-2 py-2 text-xs">viatu</td>
-                                    <td class="truncate px-2 py-2 text-xs">puma</td>
-                                    <td class="truncate px-2 py-2 text-xs">72/628</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+    <div class="col-span-full xl:col-span-2">
+        <div class="bg-gray-50 rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+            <div class="w-full">
+                <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3 text-gray-800 dark:text-gray-200">store reach</h5>
+                <div id="chart3" class="text-gray-800"></div>
+            </div>
+        </div>
+    </div>
 
-                <div class="rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 bg-gray-50 dark:border-gray-700 py-4 px-4 mx-2 my-4 md:m-5">
-                    <div class="w-full">
-                        <div id="chart4"></div>
-                    </div>
+    <div class="col-span-full xl:col-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            <div class="rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 bg-gray-50 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+                <div class="w-full">
+                    <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3">low stock</h5>
+                    <table class="w-full text-left capitalize overflow-y-auto">
+                        <thead class="font-semibold uppercase bg-gray-50 dark:bg-gray-700">
+                            <tr>
+                                <th class="py-2 px-2">item</th>
+                                <th class="py-2 px-2">brand</th>
+                                <th class="py-2 px-2">Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-b-gray-400">
+                                <td class="truncate px-2 py-2 text-xs">viatu</td>
+                                <td class="truncate px-2 py-2 text-xs">puma</td>
+                                <td class="truncate px-2 py-2 text-xs">72/628</td>
+                            </tr>
+                            <tr class="border-b dark:border-b-gray-400">
+                                <td class="truncate px-2 py-2 text-xs">viatu</td>
+                                <td class="truncate px-2 py-2 text-xs">puma</td>
+                                <td class="truncate px-2 py-2 text-xs">72/628</td>
+                            </tr>
+                            <tr class="border-b dark:border-b-gray-400">
+                                <td class="truncate px-2 py-2 text-xs">viatu</td>
+                                <td class="truncate px-2 py-2 text-xs">puma</td>
+                                <td class="truncate px-2 py-2 text-xs">72/628</td>
+                            </tr>
+                            <tr class="border-b dark:border-b-gray-400">
+                                <td class="truncate px-2 py-2 text-xs">viatu</td>
+                                <td class="truncate px-2 py-2 text-xs">puma</td>
+                                <td class="truncate px-2 py-2 text-xs">72/628</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            
-        </div>
 
+            <div class="rounded-lg sm:flex dark:bg-gray-800 border border-gray-200 bg-gray-50 dark:border-gray-700 py-2 px-2 mx-2 my-2 md:m-3">
+                <div class="w-full">
+                    <div id="chart4"></div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-4 md:space-y-0">
-        <div class="relative overflow-x-auto space-y-3 rounded-lg border border-gray-200 dark:border-gray-700 mx-2 md:mx-4 bg-gray-50 dark:bg-gray-800">
-            <h1 class="text-xl font-bold p-3">Pending requests</h1>
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 text-nowrap whitespace-nowrap capitalize">
+</div>
 
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-300">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">order</th>
-                        <th scope="col" class="px-6 py-3">customer</th>
-                        <th scope="col" class="px-6 py-3">destination</th>
-                        <th scope="col" class="px-6 py-3">shiping</th>
-                        <th scope="col" class="px-6 py-3">comment</th>
-                    </tr>
-                </thead>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-2 md:space-y-0">
+    <div class="relative overflow-x-auto space-y-3 rounded-lg border border-gray-200 dark:border-gray-700 mx-2 md:mx-4 bg-gray-50 dark:bg-gray-800">
+        <h1 class="text-xl font-bold p-3">Pending requests</h1>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 text-nowrap whitespace-nowrap capitalize">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-300">
+                <tr>
+                    <th scope="col" class="px-6 py-3">order</th>
+                    <th scope="col" class="px-6 py-3">customer</th>
+                    <th scope="col" class="px-6 py-3">destination</th>
+                    <th scope="col" class="px-6 py-3">shiping</th>
+                    <th scope="col" class="px-6 py-3">comment</th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534805</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">dodoma</td>
-                        <td class="px-6 py-4">DHL</td>
-                        <td class="px-6 py-4">instock</td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534967</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">dar es salaam</td>
-                        <td class="px-6 py-4">bus office</td>
-                        <td class="px-6 py-4">no stock</td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534152</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">morogoro</td>
-                        <td class="px-6 py-4">FexEd</td>
-                        <td class="px-6 py-4">low stock</td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
-
-        <div class="relative overflow-x-auto space-y-3 rounded-lg border border-gray-200 dark:border-gray-700 mx-2 md:mx-4 bg-gray-50 dark:bg-gray-800">
-            <h1 class="text-xl font-bold p-3">On the go orders</h1>
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 text-nowrap whitespace-nowrap capitalize">
-
-                <thead class="text-xs uppercase bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">order</th>
-                        <th scope="col" class="px-6 py-3">customer</th>
-                        <th scope="col" class="px-6 py-3">destination</th>
-                        <th scope="col" class="px-6 py-3">shiping</th>
-                        <th scope="col" class="px-6 py-3">step</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534805</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">dodoma</td>
-                        <td class="px-6 py-4">DHL</td>
-                        <td class="px-6 py-4">in transit</td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534967</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">dar es salaam</td>
-                        <td class="px-6 py-4">bus office</td>
-                        <td class="px-6 py-4">processing</td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534152</a></th>
-                        <td class="px-6 py-4">matayo ayo</td>
-                        <td class="px-6 py-4">morogoro</td>
-                        <td class="px-6 py-4">FexEd</td>
-                        <td class="px-6 py-4">pickup point</td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534805</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">dodoma</td>
+                    <td class="px-6 py-4">DHL</td>
+                    <td class="px-6 py-4">instock</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534967</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">dar es salaam</td>
+                    <td class="px-6 py-4">bus office</td>
+                    <td class="px-6 py-4">no stock</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534152</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">morogoro</td>
+                    <td class="px-6 py-4">FexEd</td>
+                    <td class="px-6 py-4">low stock</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
+    <div class="relative overflow-x-auto space-y-3 rounded-lg border border-gray-200 dark:border-gray-700 mx-2 md:mx-4 bg-gray-50 dark:bg-gray-800">
+        <h1 class="text-xl font-bold p-3">On the go orders</h1>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 text-nowrap whitespace-nowrap capitalize">
+            <thead class="text-xs uppercase bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                <tr>
+                    <th scope="col" class="px-6 py-3">order</th>
+                    <th scope="col" class="px-6 py-3">customer</th>
+                    <th scope="col" class="px-6 py-3">destination</th>
+                    <th scope="col" class="px-6 py-3">shiping</th>
+                    <th scope="col" class="px-6 py-3">step</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534805</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">dodoma</td>
+                    <td class="px-6 py-4">DHL</td>
+                    <td class="px-6 py-4">in transit</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534967</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">dar es salaam</td>
+                    <td class="px-6 py-4">bus office</td>
+                    <td class="px-6 py-4">processing</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><a href="#">6203534152</a></th>
+                    <td class="px-6 py-4">matayo ayo</td>
+                    <td class="px-6 py-4">morogoro</td>
+                    <td class="px-6 py-4">FexEd</td>
+                    <td class="px-6 py-4">pickup point</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script>
     // Categories
@@ -606,6 +600,6 @@
 </div>
 </body>
 
-<script src="/js/flowbite.js" type="text/javascript"></script>
-<script src="/js/github-btn.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="js/flowbite.js" type="text/javascript"></script>
+<script src="js/github-btn.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
