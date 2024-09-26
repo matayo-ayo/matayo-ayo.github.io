@@ -9,25 +9,16 @@
   <meta name="author" content="Matayo Ayo">
   <link rel="canonical" href="https://kiduka.com">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/logo.png">
-  <link rel="icon" type="image/png" href="icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/logo.png">
+  <link rel="icon" type="image/png" href="/icons/favicon.ico">
 
-  <link href="styles/style.css" rel="stylesheet">
+  <link href="/styles/style.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="js/theme.js" type="text/javascript"></script>
-  <script src="js/apexcharts.js"></script>
-
-  <meta content="my profile" name="description">
-  <meta content="matayo, ayo, profile" name="keywords">
-  <meta property="og:title" content="Kiduka vendor account sample" />
-  <meta property="og:description" content="Kiduka vendor sample account" />
-  <meta property="og:image" content="/icons/logo.png" />
-  <meta property="og:url" content="https://matayo-ayo.github.io" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:locale" content="en" />
+  <script src="/js/theme.js" type="text/javascript"></script>
+  <script src="/js/apexcharts.js"></script>
 
   <title>kiduka - dashboard</title>
 
@@ -58,7 +49,7 @@
                     </svg>
                 </button>
                 <a href="/" class="flex">
-                    <img src="icons/logo.png" id="logo" class="h-12 w-h-12 mr-3" alt="logo">
+                    <img src="/icons/logo.png" id="logo" class="h-12 w-h-12 mr-3" alt="logo">
                     <span class="self-center text-3xl font-semibold whitespace-nowrap text-gray-700 dark:text-gray-200">kiduka</span>
                 </a>
             </div>
@@ -74,7 +65,7 @@
                 <!-- User profile -->
                 <div>
                     <button type="button" data-dropdown-toggle="apps-dropdown" class="p-2 text-gray-500 rounded-lg sm:flex hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
-                        <img src="icons/logo.png" alt="user" class="w-9 h-9 rounded-full ring-4 ring-gray-600 dark:ring-gray-500 p-1" srcset="">
+                        <img src="/icons/logo.png" alt="user" class="w-9 h-9 rounded-full ring-4 ring-gray-600 dark:ring-gray-500 p-1" srcset="">
                     </button>
                     <div class="z-50 hidden max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:bg-gray-700 dark:divide-gray-600"
                         id="apps-dropdown">
@@ -137,32 +128,84 @@
 
                    <li>
                        <a href="/" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
-                           <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                               <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                               <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                           </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-style" viewBox="0 0 16 16">
+                            <path d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm8 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm8 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-4a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
                            <span class="ml-3" sidebar-toggle-item>Dashboard</span>
                        </a>
                    </li>
 
                    <li>
-                       <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-assessment" data-collapse-toggle="dropdown-assessment">
-                           <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                               <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
-                               </path>
-                           </svg>
-                           <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Assessment</span>
+                       <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-product" data-collapse-toggle="dropdown-product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                           <span class="flex-1 ml-3 text-left whitespace-nowrap capitalize" sidebar-toggle-item>products</span>
                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                            </svg>
                        </button>
-                       <ul id="dropdown-assessment" class="hidden py-2 space-y-2">
-                           <li><a href="/assessment/dependants" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Assignments</a></li>
-                           <li><a href="/assessment/dependants" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Attendance</a></li>
-                           <li><a href="/assessment/dependants" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Results</a></li>
-                           <li><a href="/assessment/dependants" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Medical</a></li>
-                           <li><a href="/assessment/dependants" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Activities</a></li>
-                       </ul>
+                       <ul id="dropdown-product" class="hidden py-2 space-y-2">
+                           <li><a href="/products/add" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">add</a></li>
+                           <li><a href="/products/analytics" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">analytics</a></li>
+                           <li><a href="/products/lowstock" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">low stock</a></li>
+                        </ul>
+                   </li>
+
+                   <li>
+                       <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-orders" data-collapse-toggle="dropdown-orders">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+                            </svg>
+                           <span class="flex-1 ml-3 text-left whitespace-nowrap capitalize" sidebar-toggle-item>orders</span>
+                           <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                           </svg>
+                       </button>
+                       <ul id="dropdown-orders" class="hidden py-2 space-y-2">
+                           <li><a href="/orders/new" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">new</a></li>
+                           <li><a href="/orders/pending" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">pending</a></li>
+                           <li><a href="/orders/intransit" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">intransit</a></li>
+                           <li><a href="/orders/reported" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">reported</a></li>
+                        </ul>
+                   </li>
+
+                   <li>
+                       <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
+                                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
+                                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
+                                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
+                            </svg>
+                           <span class="flex-1 ml-3 text-left whitespace-nowrap capitalize" sidebar-toggle-item>sales</span>
+                           <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                           </svg>
+                       </button>
+                       <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                           <li><a href="/sales/revenue" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">revenue</a></li>
+                           <li><a href="/sales/analytics" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">analytics</a></li>
+                           <li><a href="/sales/report" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">report</a></li>
+                        </ul>
+                   </li>
+
+                   <li>
+                       <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-communication" data-collapse-toggle="dropdown-communication">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-quote" viewBox="0 0 16 16">
+                                <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                                <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                            </svg>
+                           <span class="flex-1 ml-3 text-left whitespace-nowrap capitalize" sidebar-toggle-item>communication</span>
+                           <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                           </svg>
+                       </button>
+                       <ul id="dropdown-communication" class="hidden py-2 space-y-2">
+                           <li><a href="/communication/alerts" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">alerts</a></li>
+                           <li><a href="/communication/inbox" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">inbox</a></li>
+                           <li><a href="/communication/feedback" class="flex items-center p-1 text-sm rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700 capitalize">feedback</a></li>
+                        </ul>
                    </li>
 
                </ul>
@@ -563,6 +606,6 @@
 </div>
 </body>
 
-<script src="js/flowbite.js" type="text/javascript"></script>
-<script src="js/github-btn.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
+<script src="/js/flowbite.js" type="text/javascript"></script>
+<script src="/js/github-btn.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
