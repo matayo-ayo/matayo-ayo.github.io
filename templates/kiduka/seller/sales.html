@@ -96,7 +96,7 @@
                                 <div class="text-sm font-medium text-gray-900 dark:text-white">Dependant(s)</div>
                             </a>
 
-                            <a href="/profile" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <a href="profile.html" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
                                 <svg class="mx-auto mb-1 text-gray-500 w-7 h-7 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
                                 </svg>
@@ -190,58 +190,232 @@
     <div class="fixed inset-0 z-10 hidden" id="sidebarBackdrop"></div>
     <main id="main-content" class="relative w-full h-full overflow-y-auto lg:ml-64">
         <div class="px-4 pt-6 pb-6">
-            <div class="bg-white rounded-lg sm:flex border border-gray-200 p-4 mx-2 my-2 md:m-3">
-                <div class="w-full">
-                    <h5 class="md:text-2xl text-xl font-semibold capitalize mb-3 text-gray-800">sales report summary</h5>
-                    <div id="chartSalesSummary" class="text-gray-800"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 p-4">
+
+                <div class="col-span-full xl:col-auto space-y-2">
+            
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize mb-3">Profit</h1>
+                        <div id="profitPieChart"></div>
+                    </div>
+            
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize mb-3">Revenue</h1>
+                        <div id="revenueChart"></div>
+                    </div>
+            
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize mb-3">Debts</h1>
+                        <div id="debtsChart"></div>
+                    </div>
+            
                 </div>
+            
+                <div class="lg:col-span-3">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize mb-3">sales summary</h1>
+                        <div id="salesSummary"></div>
+                    </div>
+                </div>
+            
+                
+                <div class="col-span-full xl:col-auto space-y-2">
+            
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize mb-3">city sales</h1>
+                        <div class="overflow-hidden">
+                            <table class="w-full text-left">
+                                <thead class="uppercase">
+                                    <th>city</th>
+                                    <th class="text-right">sales</th>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="overflow-y-auto overflow-x-auto h-80 md:h-[12rem]">
+                            <table class="w-full text-left">
+                                <tbody>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                    <tr><td>Arusha</td><td class="text-right">700,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg w-full items-center border border-gray-300 dark:border-gray-700">
+                        <h1 class="md:text-2xl text-xl font-bold capitalize p-4">top categories</h1>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left table-auto border-collapse text-nowrap">
+                                <thead class="uppercase bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm">
+                                    <tr>
+                                        <th class="p-4 border-b border-gray-300 dark:border-gray-600">Category</th>
+                                        <th class="p-4 border-b border-gray-300 dark:border-gray-600">Saved</th>
+                                        <th class="p-4 border-b border-gray-300 dark:border-gray-600">Purchases</th>
+                                        <th class="p-4 border-b border-gray-300 dark:border-gray-600">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-800 dark:text-gray-300 text-sm">
+                                    <tr>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">Clothes, Mens</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">57</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">293</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">1,254</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">Clothes, Mens</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">57</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">293</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">1,254</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">Clothes, Mens</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">57</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">293</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">1,254</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">Clothes, Mens</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">57</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">293</td>
+                                        <td class="p-4 border-b border-gray-200 dark:border-gray-600">1,254</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+            
+                </div>
+            
             </div>
             
-            
             <script type="text/javascript">
-                // sales summary
-                var chartSalesSummary = {
+            
+                var profitPieChart = {
                     chart: {
-                        height: 450,
-                        type: "line",
-                        stacked: true,
-                        background: '#FFF',
+                        height: 100,
                         toolbar: {
                             show: false
                         }
                     },
                     dataLabels: {
-                        enabled: true
+                        enabled: false
                     },
                     series: [
                         {
-                            name: "Sales",
+                            name: "Profit",
                             type: "line",
-                            data: [45, 52, 38, 45, 19, 23, 2]
+                            data: [21, 52, 68, 68, 102]
                         },
-                        {
-                            name: "Month",
-                            type: "bar",
-                            data: [100, 200, 150, 180, 90, 130, 60]
-                        }
                     ],
                     stroke: {
                         curve: 'smooth'
                     },
                     xaxis: {
-                        categories: [
-                            "January : 2023", "February : 2023", "March : 2023", "April : 2023", "May : 2023", "June : 2023",
-                            "July : 2023", "August : 2023", "September : 2023", "October : 2023", "November : 2023", "December : 2023"
-                        ],
-                        labels: {
-                            style: {
-                                colors: '#000'  // Set x-axis label color for dark mode
-                            }
+                        labels: { show: false },
+                        axisBorder: { show: false },
+                        axisTicks: { show: false }
+                    },
+                    yaxis: {
+                        labels: { show: false }
+                    }
+                };
+                var chart = new ApexCharts(document.querySelector("#profitPieChart"), profitPieChart);
+                chart.render();
+            
+                var revenueChart = {
+                    chart: {
+                        height: 185,
+                        type: 'pie'
+                    },
+                    series: [62, 38],
+                    labels: ['unpain', 'paid'],
+                    dataLabels: { enabled: false },
+                    legend: { show: false }
+                };
+                var chart = new ApexCharts(document.querySelector("#revenueChart"), revenueChart);
+                chart.render();
+            
+                var debtsChart = {
+                    chart: {
+                        height: 100,
+                        toolbar: {
+                            show: false
                         }
                     },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    series: [
+                        {
+                            name: "Debts",
+                            type: "bar",
+                            data: [21, 52, 68, 68, 102]
+                        },
+                    ],
+                    xaxis: {
+                        labels: { show: false },
+                        axisBorder: { show: false },
+                        axisTicks: { show: false }
+                    },
+                    yaxis: {
+                        labels: { show: false }
+                    }
                 };
+                var chart = new ApexCharts(document.querySelector("#debtsChart"), debtsChart);
+                chart.render();
             
-                var chart = new ApexCharts(document.querySelector("#chartSalesSummary"), chartSalesSummary);
+                var salesSummary = {
+                    chart: {
+                        toolbar: { show: false }
+                    },
+                    dataLabels: { enabled: false },
+                    stroke: { curve: 'smooth' },
+                    series: [
+                        {
+                            name: "Debts",
+                            type: "area",
+                            data: [21, 52, 68, 68, 102]
+                        },
+                    ],
+                    xaxis: {
+                        labels: { show: false },
+                        axisBorder: { show: false },
+                        axisTicks: { show: false }
+                    },
+                    yaxis: {
+                        labels: { show: false }
+                    }
+                };
+                var chart = new ApexCharts(document.querySelector("#salesSummary"), salesSummary);
                 chart.render();
             
             </script>
